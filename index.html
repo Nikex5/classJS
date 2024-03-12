@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(lastName, firstName, age, department, salary) {
+                this.lastName = lastName;
+                this.firstName = firstName;
+                this.age = age;
+                this.department = department;
+                this.salary = salary
+            }
+            celebrateBirthday(age) {
+                this.age = this.age + 1;
+            }
+        }
+        let Person1 = new Person('Osipenko', 'Nikita', 27, 'CEO', 'Freedom');
+        console.log(Person1);
+        let Person2 = new Person('Osipenko2', 'Nikita2', 27, 'CEO', 'Freedom');
+        console.log(Person2);
+        let Person3 = new Person('Osipenko3', 'Nikita3', 27, 'CEO', 'Freedom');
+        console.log(Person3);
+        let Person4 = new Person('Osipenko4', 'Nikita4', 27, 'CEO', 'Freedom');
+        console.log(Person4);
+        let Person5 = new Person('Osipenko5', 'Nikita5', 27, 'CEO', 'Freedom');
+        console.log(Person5);
+        Person1.celebrateBirthday()
+        console.log('')
+        console.log(Person1)
+        ////////////////////////////////////////////////
+        console.log('////////////////////////////////////////////////')
+
+        class PersonPapa {
+            constructor(surname, name, age, gender) {
+                this.surname = "lol";
+                this.name = name;
+                this.age = age;
+                this.gender = gender
+            }
+            rename(name) {
+                this.name = this.name + "Edit";
+            }
+        }
+        class Admin extends PersonPapa {
+            constructor(surname, name, age, gender, role, id) {
+                super(surname, name, age, gender)
+                this.role = role;
+                this.id = id
+            }
+        }
+
+        class Client extends PersonPapa {
+            constructor(surname, name, age, gender, sale) {
+                super(surname, name, age, gender)
+                this.sale = sale
+            }
+        }
+
+        let Admin1 = new Admin('Osipenko', 'Nikita', 27, 'man', 'papa', 777);
+        console.log(Admin1)
+        let Client1 = new Client("Ivanov", "Ivan", 25, "man", "boll");
+        console.log(Client1)
+        Admin1.rename();
+        console.log(Admin1);
+        Client1.rename();
+        console.log(Client1);
+
+    </script>
+</body>
+
+</html>
